@@ -1,11 +1,13 @@
 <?php require_once("../resources/layouts/html_begin.php"); ?>
 
     
-  <div class="container">
+<div class="container">
 
-      <div class="row row-offcanvas row-offcanvas-right">
+  <!-- Bootstrap crea una gran final para mostrar el contenido -->
+  <div class="row row-offcanvas row-offcanvas-right">
 
-        <div class="col-xs-12 col-sm-9">
+    <!--Crea una columna principal -->
+    <div class="col-xs-12 col-sm-9">
           <p class="pull-right visible-xs">
             <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
           </p>
@@ -18,18 +20,18 @@
             <br>
             <?php echo var_dump($connection);?>
           </div>
-        </div><!--/span-->
+    </div><!-- de la columna principal -->
 
-        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
-          <div class="list-group">
-            <a href="#" class="list-group-item active">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-          </div>
-        </div><!--/span-->
+    <!-- Crea otra columna que actua como aside -->
+    <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
 
-      </div><!--/row-->
+           <h4>Our Topics</h4>
 
-  </div><!--Container -->
+    </div><!--Fin columna aside-->
+
+  </div><!--/row-->
+
+</div><!--Container necesario para Bootstrap -->
 
 
 <?php require_once("../resources/layouts/html_end.php"); ?>
