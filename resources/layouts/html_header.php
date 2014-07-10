@@ -21,6 +21,17 @@
         <li><a href="#">About</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
+
+      <form role="search" class="navbar-form navbar-left">
+        <div class="form-group">
+          <input type="text" placeholder="Search" class="form-control">
+        </div>
+      </form>
+
+      <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Login</a></li>
+      </ul>
+
     </div><!-- Fin menu de opciones-->
 
 

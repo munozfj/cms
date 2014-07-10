@@ -12,13 +12,10 @@
             <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
           </p>
           <div class="jumbotron">
+
             <h1>Welcome to <span class="welcome"> <?php echo APPLICATION_SHORT_TITLE ?> </span></h1>
-            <p>Constantes de la aplicación</p>
-            <?php echo LAYOUTS_PATH;?>
-            <br>
-            <?php echo LIBRARIES_PATH;?>
-            <br>
-            <?php echo var_dump($connection);?>
+
+
           </div>
     </div><!-- de la columna principal -->
 
