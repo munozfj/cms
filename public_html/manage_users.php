@@ -3,7 +3,7 @@
 
 <?php
   /*Variable de contexto */
-  $environment="PUBLIC";
+  $environment="PRIVATE";
 ?>
     
 <div class="container">
@@ -14,18 +14,18 @@
     <!--Crea una columna principal -->
     <div class="col-xs-12 col-sm-9">
 
-          <div class="jumbotron">
+      <div class="jumbotron">
 
-            <h1>Welcome to <span class="welcome"> <?php echo APPLICATION_SHORT_TITLE ?> </span></h1>
+        <h1>Manage Users </h1>
 
 
-          </div>
+      </div>
     </div><!-- de la columna principal -->
 
     <!-- Crea otra columna que actua como aside -->
     <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
 
-           <h4>Our Topics</h4>
+      <a href="management.php">&laquo; Main Main </a>
 
     </div><!--Fin columna aside-->
 

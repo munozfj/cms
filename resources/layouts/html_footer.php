@@ -1,3 +1,5 @@
+
+<!-- Footer -->
 <hr>
 
 <footer>

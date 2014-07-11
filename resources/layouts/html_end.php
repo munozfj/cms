@@ -7,5 +7,5 @@
 </html>
 
 
-<?php require_once(LAYOUTS_PATH . "/php_end.php"); ?>
+
 

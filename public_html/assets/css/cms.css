@@ -36,3 +36,14 @@ footer
   font-family: strumpf-std, sans-serif;
   font-weight: bold;
 }
+
+#sidebar 
+{
+  background-color: lightgray;
+}
+
+.selected-item
+{
+  font-weight: bold;
+  font-size: 16px;
+}

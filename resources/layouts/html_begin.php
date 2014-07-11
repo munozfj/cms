@@ -1,8 +1,3 @@
-<?php 
-
-  require_once("../resources/layouts/php_begin.php"); 
-
-?>
 
 <!DOCTYPE HTML>
 
@@ -22,5 +17,6 @@
 
 <body>
     <?php require_once(LAYOUTS_PATH . "/html_header.php"); ?>
+
 
 

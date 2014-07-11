@@ -1,10 +1,5 @@
-<?php require_once("../resources/layouts/php_begin.php"); ?>
-<?php require_once(LAYOUTS_PATH . "/html_begin.php"); ?>
+<?php require_once("../resources/layouts/html_begin.php"); ?>
 
-<?php
-  /*Variable de contexto */
-  $environment="PUBLIC";
-?>
     
 <div class="container">
 
@@ -34,7 +29,6 @@
 </div><!--Container necesario para Bootstrap -->
 
 
-<?php require_once(LAYOUTS_PATH . "/html_end.php"); ?>
-<?php require_once(LAYOUTS_PATH . "/php_end.php"); ?>
+<?php require_once("../resources/layouts/html_end.php"); ?>
 
 
