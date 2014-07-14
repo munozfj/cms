@@ -38,6 +38,8 @@
   /* Función para verificar si una consulta DML se realizo correctamente */
   function confirm_query($result_set)
   {
+    global $connection;
+    
     if(!$result_set)
     {
       die("Database query failed ". mysqli_error($connection) );

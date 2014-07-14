@@ -30,11 +30,16 @@
 
         if(isset($current_subject_id))
         {
-          echo "<h4> Subject: " . htmlentities($current_subject_id['menu_name']) . "  </h4>";
+          echo "<h4> Subject: " . htmlentities($current_subject_id['menu_name']) . "  </h4> \n";
+          echo "<a href='subject_edit.php?subject=". $current_subject_id['id']. "'  >\n<button type='button' class='btn btn-primary' >Edit Subject </button> </a> \n";
+          echo "<a href='subject_delete.php?subject=". $current_subject_id['id']. "'  > \n <button type='button' class='btn btn-danger' "."onclick='return confirm(\"Are you sure?\");' "." >Delete Subject </button> \n</a>";
         } 
         elseif (isset($current_page_id))
         {
           echo "<h4> Page: " . htmlentities($current_page_id['menu_name']) . "  </h4>";
+
+          echo "<a href='page_edit.php?subject=". $current_subject_id['id']. "'  >\n<button type='button' class='btn btn-primary' >Edit Page </button> </a> \n";
+          echo "<a href='page_delete.php?subject=". $current_subject_id['id']. "'  > \n <button type='button' class='btn btn-danger' "."onclick='return confirm(\"Are you sure?\");' "." >Delete Page </button> \n</a>";
         } 
         else
         {
