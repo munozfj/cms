@@ -16,6 +16,9 @@
 
       <div class="jumbotron">
 
+        <!-- Mostrar mensajes flash -->
+        <?php echo show_flash(); ?>
+        
         <h1>Manage Users </h1>
 
 

@@ -16,6 +16,9 @@
 
       <div class="jumbotron">
 
+        <!-- Mostrar mensajes flash -->
+        <?php echo show_flash(); ?>
+        
         <h1>Main Menu </h1>
         <ul>
           <li> <a href="manage_contents.php"> Manage Contents </a> </li>

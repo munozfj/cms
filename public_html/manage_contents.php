@@ -22,6 +22,9 @@
 
       <div class="jumbotron">
 
+        <!-- Mostrar mensajes flash -->
+        <?php echo show_flash(); ?>
+        
         <h2>Manage Contents</h2>
         <?php  
 
@@ -49,6 +52,8 @@
       <a href="management.php"> &laquo; Main Main </a>
       <h3> Our Topics </h3>
       <?php echo navigation_subjects_pages($current_subject_id,$current_page_id); ?>
+      <br>
+      <a href="subject_new.php"> + Add a new subject </a>
       
     </div><!--Fin columna aside-->
 

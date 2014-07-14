@@ -16,6 +16,9 @@
 
           <div class="jumbotron">
 
+          <!-- Mostrar mensajes flash -->
+          <?php echo show_flash(); ?>
+
             <h1>Welcome to <span class="welcome"> <?php echo APPLICATION_SHORT_TITLE ?> </span></h1>
 
 

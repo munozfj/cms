@@ -1,5 +1,58 @@
 <?php
 
+  function redirect_to($new_location)
+  {
+    header("Location: ". $new_location);
+    exit;
+  }
+
+  /* Muestra mensajes de operaciones SQL*/
+  function show_flash()
+  {
+    /* Mensaje de la session */
+    $alert_attr = alert_message();
+    if(empty($alert_attr))
+    {
+      return null;
+    }
+
+    $output  = "\n <div class='alert ". htmlentities($alert_attr['alert_type']) ."' role='alert'>\n";
+    $output .= htmlentities($alert_attr['alert_message']);
+    $output .=  "\n</div>\n";
+
+    return $output;
+  }
+
+  /* Muestro los mensajes de error */
+  function show_errores()
+  {
+    /* Mensaje de la session */
+    $errors = errors();
+    if(empty($errors))
+    {
+      return null;
+    }
+
+    /* Armo div para errores */
+    $output  = "<div class='error alert-danger' >\n";
+    $output .= "Please solve the following errores:\n";
+    $output .= "<ul>\n";
+    foreach ($errors as $string) {
+      $output .= "<li> {$string} </li>";
+    }
+    $output .= "</ul>\n";
+    $output .= "</div> \n";
+
+    return $output;
+  }
+
+  /* Muestra nombre de campos */
+  function fieldname_as_text($field_name)
+  {
+    return ucword(replace("_"," ",$field_name));
+  }
+
+
   function navigation_subjects_pages($current_subject_id, $current_page_id)
   {
     /* lista de Subjets */
