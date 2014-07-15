@@ -27,7 +27,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cdeb8e', end
   text-decoration: none;
 };
 
-footer small
+footer p
 {
   text-align: center;
 }

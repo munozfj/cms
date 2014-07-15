@@ -13,6 +13,16 @@
     
 <?php
 
+  /* Valido si tiene paginas hijas */
+  $page_set = find_all_pages_for_subject($current_subject_id['id']);
+
+  if(mysqli_num_rows($page_set))
+  {
+    $alert['alert_message'] = "The subject cant be deleted because it has pages associated" ;
+    $alert['alert_type'] = "alert-danger";
+    $_SESSION['alert_attr']=$alert;
+    redirect_to("manage_contents.php?subject=".$current_subject_id['id']);
+  }
 
   /* Armo el string de inserción */
   $query  = "delete from Subjects ";

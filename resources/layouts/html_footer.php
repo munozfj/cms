@@ -3,6 +3,6 @@
 <hr>
 
 <footer>
-  <small>FM &copy; Company <?php echo date('Y'); ?> </small>
+  <p> <small>FM &copy; Company <?php echo date('Y'); ?> </small></p>
 </footer>
 
