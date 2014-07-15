@@ -56,7 +56,7 @@
 
       <a href="management.php"> &laquo; Main Main </a>
       <h3> Our Topics </h3>
-      <?php echo navigation_subjects_pages($current_subject_id,$current_page_id); ?>
+      <?php echo navigation_aside("manage_contents.php", $current_subject_id,$current_page_id, true); ?>
       <br>
       <a href="subject_new.php"> + Add a new subject </a>
       

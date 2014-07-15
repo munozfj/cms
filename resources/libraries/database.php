@@ -102,13 +102,15 @@
   }
 
   /* Obtiene todos los registros de Subjects*/
-  function find_all_subjects()
+  function find_all_subjects($solo_visible=false)
   {
     global $connection;
 
     /* Genero la cadena con el query */
+
     $query  = "select * ";
     $query .= "from Subjects ";
+    $query .= ($solo_visible === true)?"where visible = 1  " : "   ";
     $query .= "order by position asc";
 
     /* Ejecuto query en la base */
@@ -148,7 +150,7 @@
 
   }
 
-  function find_all_pages_for_subject($subject_id)
+  function find_all_pages_for_subject($subject_id,$solo_visible=false)
   {
     global $connection;
 
@@ -156,6 +158,7 @@
     $query  = "select * ";
     $query .= "from Pages ";
     $query .= "where subject_id = " . mysqli_prep($subject_id) ." ";
+    $query .= ($solo_visible === true)?"and visible = 1  " : "   ";
     $query .= "order by position asc";
 
     /* Ejecuto query en la base */
