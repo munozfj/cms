@@ -2,8 +2,8 @@
 <?php require_once(LAYOUTS_PATH . "/html_begin.php"); ?>
 
 <?php
-  /*Variable de contexto */
-  $environment="PRIVATE";
+  /* Valido autenticacion */
+  confirm_logged_in();
 ?>
     
 <div class="container">

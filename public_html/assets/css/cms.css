@@ -25,9 +25,9 @@ body {
 {
   color: blue;
   text-decoration: none;
-};
+}
 
-footer p 
+footer
 {
   text-align: center;
 }
@@ -54,11 +54,18 @@ footer p
   background-color: green;
   color: white;
 
-  border:solid; 5px #000000;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
+  border:solid; 10px #000000;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
 
+  -moz-box-shadow:10px 10px 5px #000000;
+  -webkit-box-shadow:10px 10px 5px #000000;
+  box-shadow:10px 10px 5px #000000;
+}
+
+.jumbotron
+{
   -moz-box-shadow:10px 10px 5px #000000;
   -webkit-box-shadow:10px 10px 5px #000000;
   box-shadow:10px 10px 5px #000000;

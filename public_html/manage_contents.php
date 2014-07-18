@@ -2,9 +2,11 @@
 <?php require_once(LAYOUTS_PATH . "/html_begin.php"); ?>
 
 <?php
-  /*Variable de contexto */
-  $environment="PRIVATE";
+  /* Valido autenticacion */
+  confirm_logged_in();
+?>
 
+<?php
   /* Recuperar los valores recibidos por GET  y 
   obtengo toda la información de cada uno de ellos*/
   $current_subject_id = (isset($_GET['subject'])) ? find_subject_by_id($_GET['subject']) : null;

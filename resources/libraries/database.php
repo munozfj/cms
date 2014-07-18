@@ -197,8 +197,97 @@
 
   }
 
+  /*****************************************************************************
+  Tabla: Users
+  *****************************************************************************/
+  /* Obtiene todos los registros de Users*/
+  function find_all_users()
+  {
+    global $connection;
 
+    /* Genero la cadena con el query */
 
+    $query  = "select * ";
+    $query .= "from Users ";
+    $query .= "order by id asc";
 
+    /* Ejecuto query en la base */
+    $user_set = mysqli_query($connection,$query);
+
+    /* Verifico si hubo retorno del query */
+    confirm_query($user_set);
+
+    /* Devuelvo set de subjects */
+    return $user_set;
+
+  }
+
+  /* Obtiene todos los campos para un determinado user_id */
+  function find_user_by_username($user_username)
+  {
+    global $connection;
+
+    /* Genero la cadena con el query */
+    $query  = "select * ";
+    $query .= "from Users ";
+    $query .= "where username= '" . mysqli_prep($user_username) ."' ";
+    $query .= "limit 1 ";
+
+    /* Ejecuto query en la base */
+    $user_set = mysqli_query($connection,$query);
+
+    /* Verifico si hubo retorno del query */
+    confirm_query($user_set);
+
+    /* Genero un array asociativo con toda la información o null */
+    if($user=mysqli_fetch_assoc($user_set))
+    {
+      return $user;
+    }
+    return null;
+
+  }
+
+  /* Validaciones Subjects */
+  function user_validations($username,$password,$first_name, $last_name)
+  {
+    /* Declaro array de errores */
+    $errors = array();
+
+    /* Validar existencia */
+    if (!has_presence($username))
+    {
+      $errors[]="Menu name cant be null";
+    }
+
+    if (!has_presence($password))
+    {
+      $errors[]="Position cant be null";
+    }
+
+    if (!has_presence($first_name))
+    {
+      $errors[]="Visible cant be null";
+    }
+
+    /* Devuelvo los errores */
+    return $errors;
+
+  }
+
+  function attempt_login($usuario,$plain_password)
+  {
+    $user = find_user_by_username($usuario);
+
+    if(user)
+    {
+      if( password_verify($plain_password,$user['hashed_password']) )
+      {
+        return $user;
+      }
+    }
+
+    return null;
+  }
 
 ?>

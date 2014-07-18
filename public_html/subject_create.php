@@ -1,8 +1,11 @@
 <?php require_once("../resources/layouts/php_begin.php"); ?>
 
 <?php
-  /*Variable de contexto */
-  $environment="PRIVATE";
+  /* Valido autenticacion */
+  confirm_logged_in();
+?>
+
+<?php
 
   /* Recuperar los valores recibidos por GET  y 
   obtengo toda la información de cada uno de ellos*/

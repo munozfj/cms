@@ -32,5 +32,14 @@
     return $errors;
   }
 
+  /* Log out */
+  function log_out()
+  {
+    if(isset($_SESSION['user_info']))
+    {
+      $_SESSION['user_info']=null;
+    }
+  }
+
 
 ?>

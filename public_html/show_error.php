@@ -1,10 +1,6 @@
 <?php require_once("../resources/layouts/php_begin.php"); ?>
 <?php require_once(LAYOUTS_PATH . "/html_begin.php"); ?>
 
-<?php
-  /* Valido autenticacion */
-  confirm_logged_in();
-?>
     
 <div class="container">
 
@@ -16,20 +12,20 @@
 
       <div class="jumbotron">
 
-        <!-- Mostrar mensajes flash -->
-        <?php echo show_flash(); ?>
-        
-        <h1>Main Menu </h1>
-        <ul>
-          <li> <a href="manage_contents.php"> Manage Contents </a> </li>
-          <li> <a href="user_index.php"> Manage Users </a> </li>
-          <li> <a href="logout.php"> Logout </a> </li>
-        </ul>
+      <h1> JavaScript no está habilitado </h1>
+      <p> Esto hace que la página consultada no funcione correctamente. </p>
+      <br>
+      <p>Por favor, actívelo.</p>
 
-      </div>
+      </div> 
     </div><!-- de la columna principal -->
 
+    <!-- Crea otra columna que actua como aside -->
+    <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar-public" role="navigation">
 
+      &nbsp;
+      
+    </div><!--Fin columna aside-->
 
   </div><!--/row-->
 
